@@ -1,0 +1,100 @@
+@import './default.css';
+@import './FontFamily.css';
+@import './topbar.css';
+@import './header.css';
+@import './home.css';
+@import './posts.css';
+@import './about.css';
+@import './logReg.css';
+@import './add.css';
+@import './error.css';
+
+/* 1. Gereksiz Sidebar ve Profil Elemanlarını Temizle */
+.sidebar { display: none !important; }
+.posts { flex: 12; width: 100%; display: flex; flex-wrap: wrap; gap: 20px; }
+
+/* 2. Post Kartı ve Aksiyon Butonları */
+.post { 
+    position: relative; 
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.post:hover { transform: translateY(-5px); }
+
+.post-actions {
+    position: absolute;
+    top: 15px; 
+    right: 15px;
+    display: flex; 
+    gap: 8px;
+    opacity: 0; 
+    transition: 0.3s ease-in-out;
+    z-index: 50; /* Butonların postun üzerinde kalması için */
+}
+.post:hover .post-actions { opacity: 1; }
+
+.action-btn {
+    background: rgba(0, 0, 0, 0.7); 
+    color: #fff;
+    border: none; 
+    padding: 8px 12px; 
+    border-radius: 6px; 
+    cursor: pointer;
+}
+.delete-btn:hover { background: #ff4d4d; }
+.share-btn:hover { background: #2ecc71; }
+
+/* 3. Modal Sistemi (Tek ve Optimize Edilmiş Tanım) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; /* Her şeyin üstünde olmalı */
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px); /* Arkayı hafif bulanıklaştırır */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 40px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 750px;
+    border-radius: 20px;
+    position: relative;
+    color: #222;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.close-btn {
+    position: absolute;
+    right: 25px; 
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #444;
+    line-height: 1;
+}
+.close-btn:hover { color: #ff4d4d; }
+
+/* 4. Footer Tasarımı */
+footer {
+    background-color: #111; 
+    color: #aaa;
+    text-align: center; 
+    padding: 40px 20px; 
+    margin-top: 60px;
+    border-top: 2px solid #333;
+}

@@ -1,0 +1,141 @@
+.posts{
+    flex: 9;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.posts .post{
+    width: calc(50% - 20px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.post h1{
+    font-family: 'Pacifico', cursive;
+}
+.posts img {
+    border-radius: 10px;
+    margin-bottom: 5px;
+    height: 300px;
+    object-fit: cover;
+}
+.post p {
+    padding:  5px;
+    font-family: 'Arvo', serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-height: 23px;
+}
+.post .authorAndDate{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.posts .authorAndDate span:nth-child(1){
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+.posts .authorAndDate span:nth-child(2){
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 700;
+}
+/* Scroll animation */
+.posts .post{
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.posts .post:nth-child(2n) {
+    transition: all 0.8s;
+}
+.posts .post.active {
+    transform:translateX(0px) ;
+    opacity: 1;
+}
+/* Responsive area */
+@media(max-width:1100px){
+    .posts .post{
+    width: 100%;
+}
+.posts .post:nth-child(2n) {
+    transition: all 0.5s;
+}
+}
+
+
+
+
+/* Modal Arka Planı */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+/* Modal İçeriği ve Animasyonu */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+    position: relative;
+    max-height: 85vh;
+    overflow-y: auto;
+    animation: zoomEffect 0.4s ease-out; /* İstediğin animasyon */
+}
+
+@keyframes zoomEffect {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Kapatma Butonu */
+.close-btn {
+    position: absolute;
+    right: 20px; top: 10px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Modal içindeki resim ve yazı stilleri */
+#modalImg {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+#modalFullText {
+    font-family: 'Arvo', serif;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+/* posts.css dosyası içinde bu bloğu bul ve cursor satırını ekle */
+
+.posts img {
+    border-radius: 10px;
+    margin-bottom: 5px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer; /* <--- Tam olarak buraya ekliyoruz */
+}
+.posts img:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}

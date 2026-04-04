@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YKCSJHY7KG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YKCSJHY7KG');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBlog | rozortex-maker</title>
+    <meta name="description" content="UFO gözlemleri, uzaylı teorileri ve paranormal olaylar üzerine güncel blog yazıları.">
+    <meta name="keywords" content="ufo blog, uzaylı haberleri, ufo kanıtları, rozortex-maker">
+    <meta property="og:title" content="UFO Blog - Gizemli Arşiv">
+    <meta property="og:description" content="Uzaylılar gerçek mi? Kanıtları inceleyin.">
+    <link rel="stylesheet" href="public/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <div class="topbar">
+        <div class="wrapper target">
+            <div class="left target">
+                <a href="pages/public.html" style="margin-right: 15px; font-weight: bold;">
+                    <i class="fa-solid fa-bars"></i> PUBLIC
+                </a>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+            </div>
+            <div class="center"> 
+                <a href="index.html">HOME</a>
+                <a href="pages/about.html">ABOUT</a>
+                <a href="pages/register.html" id="regBtn">REGISTER</a>
+                <a href="pages/login.html" id="loginBtn">LOGIN</a>
+                <a href="pages/add.html" id="addBtn" style="display: none;">ADD</a>
+                <!-- LOGOUT Butonu Eklendi -->
+                <a href="#" id="logoutBtn" onclick="logout()" style="display: none; color: #ff4d4d;">LOGOUT</a>
+            </div>
+            <div class="right">
+                <div class="searchEngine" id="searchEngine">
+                    <input type="text" id="searchInput" placeholder="Search UFOs...">
+                    <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header target">
+        <img src="public/img/background/Gemini_Generated_Image_1rwex1rwex1rwex1.png" alt="background">
+        <h1>BIBlog</h1>
+        <h3>The Pit Of High Quality Blogs</h3>
+    </header>
+
+    <div class="home">
+        <div class="wrapper">
+            <div class="posts" id="postContainer"></div>
+        </div>
+    </div>
+
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h1 id="modalTitle"></h1>
+            <img id="modalImg" src="" alt="">
+            <p id="modalFullText"></p>
+            <div class="authorAndDate" id="modalMeta"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Credits: Google | Gemini AI</p>
+        <p>Powered by <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi24ZeJrdSTAxVoRPEDHV3PMdgQFnoECA0QAQ&url=https%3A%2F%2Ffirebase.google.com%2F&usg=AOvVaw3fzCjfkgyYXdUPCdS8VWFg&opi=89978449" target="_blank">Firebase</a></p>
+        <p>Images from <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwid797rrNSTAxWC4gIHHR68F04QFnoECAsQAQ&url=https%3A%2F%2Fimgbb.com%2F&usg=AOvVaw37zPmM-Gtysj6MDSFt6kw-&opi=89978449" target="_blank">ImgBB</a></p>
+    </footer>
+
+    <!-- Script Yükleme Sırası Önemli -->
+    <script src="public/js/scroll.js"></script>
+    <script src="public/js/modal.js"></script>
+    <script type="module" src="public/js/firebase.js"></script>
+    <script type="module" src="public/js/auth-kontrol.js"></script>
+    <script type="module" src="public/js/get-posts.js"></script>
+    <script type="module" src="public/js/search.js"></script>
+</body>
+</html>

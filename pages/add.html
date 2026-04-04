@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../public/css/index.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   <title>Add Post - BIBlog</title>
+</head>
+<body>
+   <div class="topbar">
+      <div class="wrapper target">
+         <div class="left">
+            <!-- PUBLIC Butonu eklendi -->
+            <a href="public.html" style="margin-right: 15px; font-weight: bold;">
+                <i class="fa-solid fa-bars"></i> PUBLIC
+            </a>
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+         </div>
+         <div class="center">
+            <a href="../index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="register.html" id="regBtn">REGISTER</a>
+            <a href="login.html" id="loginBtn">LOGIN</a>
+            <a href="add.html" id="addBtn" style="display: none;">ADD</a>
+            <!-- LOGOUT Butonu eklendi -->
+            <a href="#" id="logoutBtn" onclick="logout()" style="display: none; color: #ff4d4d;">LOGOUT</a>
+         </div>
+         <div class="right">
+            <div class="searchEngine" id="searchEngine">
+               <input type="text" id="searchInput" placeholder="Search UFOs...">
+               <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="add">
+      <form id="addPostForm">
+         <div class="text">
+            <input type="text" id="postTitle" placeholder="Your Title *" required>
+            <textarea id="postContent" placeholder="Your Content *" required></textarea>
+            <input type="text" id="postAuthor" placeholder="Your Name *" required>
+         </div>
+
+         <div class="button">
+            <button type="submit" id="submitBtn">
+               <i class="fa-solid fa-plus"></i>
+            </button>
+            <label for="file">
+               <i class="fa-solid fa-image"></i>
+            </label>
+            <input type="file" id="file" style="display: none;" accept="image/*"> 
+         </div>
+      </form>
+   </div>
+
+   <script src="../public/js/scroll.js"></script>
+   <script type="module" src="../public/js/firebase.js"></script>
+   <script type="module" src="../public/js/add-post.js"></script>
+   <script type="module" src="../public/js/auth-kontrol.js"></script>
+   <script type="module" src="../public/js/search.js"></script>
+</body>
+</html>

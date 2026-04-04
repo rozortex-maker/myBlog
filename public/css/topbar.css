@@ -1,0 +1,124 @@
+.topbar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fff;
+}
+.topbar .wrapper{
+    width: 100%;
+    max-width: 1366px;
+    display: flex;
+}
+.topbar .left, .topbar .right{
+    flex: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.topbar .left i{
+    font-size: 1.3rem;
+}
+.topbar .center{
+    flex: 6;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.topbar .right span img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* --- Sadece Search Engine Bölümü --- */
+
+.topbar .right .searchEngine {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 40px; /* Başlangıçta sadece ikon sığacak kadar */
+    height: 35px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden; /* Input dışarı taşmasın */
+}
+
+/* Arama kutusu açıldığında genişlik */
+.topbar .right .searchEngine.active {
+    width: 180px; /* İstediğin genişliğe göre değiştirebilirsin */
+}
+
+.topbar .right .searchEngine i {
+    position: absolute;
+    right: 5px; /* İkonu sağa yasla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2; /* İkon hep üstte kalsın */
+}
+
+.topbar .right .searchEngine input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 0 35px 0 15px; /* Sağdan ikon için boşluk bırak */
+    opacity: 0;
+    transition: all 0.4s ease;
+    outline: none;
+}
+
+/* Aktif olduğunda input görünür olsun */
+.topbar .right .searchEngine.active input {
+    opacity: 1;
+}
+
+/* --- Search Engine Sonu --- */
+
+/* Scroll animation */
+.topbar .wrapper{
+    opacity: 0;
+    transition: all 0.5s;
+    transform: translateY(-10px)    
+}
+.topbar .wrapper.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.topbar .left.i{
+    transition: all 0.3s;
+    transform: translateX(-20px);
+    opacity: 0;
+}
+.topbar .wrapper.active .left.i{
+    transition: all 0.3s;
+    transform: translateX(-20px);
+    opacity: 1;
+}    
+.topbar .wrapper.active .left.i:nth-child(2){
+    transition-duration: 0.5s;
+}
+.topbar .wrapper.active .left.i:nth-child(3){
+    transition-duration: 0.8s;
+}
+.topbar .wrapper.active .left.i:nth-child(4){
+    transition-duration: 1.2s;
+}
+.topbar .center .topbar .right{
+    transform: translateX(-10px) translateY(-10px);
+    transition: all 0.5;
+    opacity: 0;
+}
+.topbar .wrapper.active .center .topbar .wrapper.active .right{
+    transform: translateX(0px) translateY(0px);
+    opacity: 1;
+}

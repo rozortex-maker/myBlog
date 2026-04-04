@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>About - BIBlog</title>
+</head>
+<body>
+    <div class="topbar">
+        <div class="wrapper target">
+            <div class="left target">
+                <!-- PUBLIC Butonu index.html'deki gibi buraya eklendi -->
+                <a href="public.html" style="margin-right: 15px; font-weight: bold;">
+                    <i class="fa-solid fa-bars"></i> PUBLIC
+                </a>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+            </div>
+            
+            <div class="center">
+                <a href="../index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="register.html" id="regBtn">REGISTER</a>
+                <a href="login.html" id="loginBtn">LOGIN</a>
+                <a href="add.html" id="addBtn" style="display: none;">ADD</a>
+                <!-- LOGOUT Butonu index.html'deki gibi eklendi -->
+                <a href="#" id="logoutBtn" onclick="logout()" style="display: none; color: #ff4d4d;">LOGOUT</a>
+            </div>
+
+            <div class="right">
+                <div class="searchEngine" id="searchEngine">
+                    <input type="text" id="searchInput" placeholder="Search UFOs...">
+                    <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header target">
+        <img src="../public/img/background/About.png" alt="background">
+        <h1>Why U.S.</h1>
+        <h3>We Are a Family</h3>
+    </header>
+
+    <div class="about">
+        <div class="wrapper target">
+            <div class="text">
+                <h1>Who Are We</h1>
+                <p>
+                    We are a dedicated team of explorers and researchers driven by the ultimate 
+                    mystery of the cosmos. Our mission is to bridge the gap between humanity and 
+                    the unknown, analyzing declassified archives and celestial phenomena to uncover
+                     the truth about extraterrestrial life.
+                </p>
+            </div>
+            <div class="photo"><img src="../public/img/team/team-1.png" alt=""></div>
+        </div>
+
+        <div class="wrapper target">
+            <div class="text">
+                <h1>Our Team</h1>
+                <p>
+                   We are a diverse collective of seasoned experts, ranging from data analysts to 
+                   field investigators, all united by a single passion: uncovering the cosmic truth. 
+                </p>
+            </div>
+            <div class="photo"><img src="../public/img/team/team-2.png" alt=""></div>
+        </div>
+
+        <div class="wrapper target">
+            <div class="text">
+                <h1>Why U.S.</h1>
+                <p>
+                    Our unwavering dedication to unparalleled accuracy and scientific transparency. 
+                </p>
+            </div>
+            <div class="photo"><img src="../public/img/team/team-3.png" alt=""></div>
+        </div>
+    </div>
+
+    <script src="../public/js/scroll.js"></script>
+    <script type="module" src="../public/js/firebase.js"></script>
+    <script type="module" src="../public/js/auth-kontrol.js"></script>
+    <script type="module" src="../public/js/search.js"></script>
+</body>
+</html>
